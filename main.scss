@@ -1,50 +1,59 @@
 @import "sass/Utils/variables";
 @import "sass/Utils/mixins";
+// général
 body {
     margin: 0px;
     padding: 0px;
 }
 
+// header
 header {
     display: flex;
     justify-content: center;
 }
 
+// index
 .accueil {
     margin-top: 20px;
     padding-bottom: 40px;
-    display: flex;
+    @include flex_column;
     align-items: center;
-    flex-direction: column;
     font-size: 45px;
-    background-color: rgb(246, 246, 246);
+    background-color: $colour-gris_clair;
     .search {
-        background-color: rgb(234, 234, 234);
+        background-color: $colour-gris_sombre;
         width: 100%;
+        font-size: 25px;
+        padding: 20px;
         display: flex;
         justify-content: center;
-        font-size: 25px;
+        i,
+        .ville {
+            margin: 20px;
+            font-weight: bold;
+        }
     }
     h1,
-    p {
+    .pub {
         text-align: center;
         width: 76%;
         margin: 25px;
     }
     button {
-        border-radius: 50px;
-        padding: 10px;
+        border-radius: 60px;
+        border: 0.125rem;
+        padding: 30px;
+        margin-top: 20px;
         width: 60%;
         font-size: 45px;
         color: white;
+        background: linear-gradient(-10deg, $colour-primaire, $colour-secondaire);
     }
 }
 
 .fonctionnement {
     margin: 20px;
-    display: flex;
-    flex-direction: column;
-    font-size: 45px;
+    @include flex_column;
     li {
         font-size: 25px;
         margin: 20px;
@@ -56,13 +65,12 @@ header {
     }
 }
 
-.restaurant {
-    background-color: rgb(234, 234, 234);
+.restaurant_accueil {
+    background-color: $colour-gris_sombre;
     font-size: 45px;
     padding: 20px;
     article {
-        display: flex;
-        flex-direction: column;
+        @include flex_column;
         background-color: white;
         margin: 20px;
         border-radius: 50px;
@@ -91,15 +99,83 @@ header {
     }
 }
 
+// menu_restaurant
+.restaurant {
+    background-color: $colour-gris_clair;
+    .header_restaurant {
+        border-top-left-radius: 80px;
+        border-top-right-radius: 80px;
+        position: relative;
+        bottom: 75px;
+        background-color: $colour-gris_clair;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        font-size: 25px;
+    }
+    img {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+    }
+    @include flex_column;
+}
+
+.carte {
+    font-size: 30px;
+    article {
+        background-color: white;
+        border-radius: 50px;
+        padding: 10px;
+        margin: 20px;
+    }
+    .price {
+        width: 100%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        font-size: 50px;
+    }
+    button {
+        display: block;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 100px;
+        margin-top: 100px;
+        border-radius: 60px;
+        border: 0.125rem;
+        padding: 30px;
+        width: 60%;
+        font-size: 45px;
+        color: white;
+        background: linear-gradient(-10deg, $colour-primaire, $colour-secondaire);
+    }
+}
+
+// footer
 footer {
-    background-color: grey;
+    background-color: $colour-footer;
     color: white;
-    margin: 20px;
+    font-size: 20px;
     img {
         height: 20px;
         object-fit: cover;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        padding-inline-start: 40px;
+        filter: invert(100%);
     }
     ul {
         list-style-type: none;
+    }
+    li {
+        margin: 5px;
+    }
+    a {
+        color: white;
+        text-decoration: none;
     }
 }
