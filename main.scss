@@ -6,27 +6,33 @@ body {
     padding: 0px;
 }
 
+h1 {
+    font-family: 'Roboto', sans-serif;
+}
+
 // header
 header {
     display: flex;
     justify-content: center;
+    img {
+        margin-top: 20px;
+    }
 }
 
 // index
 .accueil {
     margin-top: 20px;
-    padding-bottom: 40px;
+    padding-bottom: 140px;
     @include flex_column;
     align-items: center;
     font-size: 45px;
     background-color: $colour-gris_clair;
     .search {
         background-color: $colour-gris_sombre;
-        width: 100%;
-        font-size: 25px;
-        padding: 20px;
+        font-size: 35px;
         display: flex;
         justify-content: center;
+        width: 100%;
         i,
         .ville {
             margin: 20px;
@@ -52,16 +58,41 @@ header {
 }
 
 .fonctionnement {
-    margin: 20px;
     @include flex_column;
-    li {
-        font-size: 25px;
+    h2 {
         margin: 20px;
+        font-size: 67.5px;
+    }
+    li {
+        font-size: 35px;
         padding: 40px;
-        width: 90%;
         text-align: center;
         box-shadow: 0 0 20px #0000002e;
-        border-radius: 20px;
+        border-radius: 30px;
+    }
+    ol {
+        list-style: none;
+        margin-right: 20px;
+    }
+    ol li {
+        margin: 0 0 0.5rem 0;
+        counter-increment: my-awesome-counter;
+        position: relative;
+    }
+    ol li::before {
+        content: counter(my-awesome-counter);
+        color: white;
+        font-size: 1.5rem;
+        font-weight: bold;
+        position: absolute;
+        --size: 42px;
+        left: calc(-1 * var(--size) - -20px);
+        line-height: var(--size);
+        width: var(--size);
+        height: var(--size);
+        background: $colour-primaire;
+        border-radius: 50%;
+        box-shadow: 1px 1px 0 #999;
     }
 }
 
@@ -83,19 +114,28 @@ header {
         object-fit: cover;
     }
     .badge {
+        background-color: rgb(153, 226, 208);
+        color: rgb(38, 158, 128);
+        font-weight: bold;
+        padding: 10px;
+        border-radius: 5px;
+        width: 20%;
         position: absolute;
-        left: 750px;
+        right: 60px;
     }
     .vignet {
         display: flex;
         align-items: center;
         justify-content: space-around;
-        width: 90%
     }
     .desc_article {
-        display: flex;
         flex-direction: column;
         width: 60%;
+        p,
+        h3 {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
     }
 }
 
@@ -105,13 +145,13 @@ header {
     .header_restaurant {
         border-top-left-radius: 80px;
         border-top-right-radius: 80px;
+        background-color: $colour-gris_clair;
         position: relative;
         bottom: 75px;
-        background-color: $colour-gris_clair;
         display: flex;
         align-items: center;
         justify-content: space-around;
-        font-size: 25px;
+        font-size: 50px;
     }
     img {
         width: 100%;
@@ -123,11 +163,11 @@ header {
 
 .carte {
     font-size: 30px;
+    padding: 10px;
+    margin: 20px;
     article {
         background-color: white;
         border-radius: 50px;
-        padding: 10px;
-        margin: 20px;
     }
     .price {
         width: 100%;
@@ -170,6 +210,7 @@ footer {
     }
     ul {
         list-style-type: none;
+        margin-bottom: 0px;
     }
     li {
         margin: 5px;

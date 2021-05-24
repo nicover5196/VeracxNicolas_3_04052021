@@ -3,6 +3,10 @@ body {
   padding: 0px;
 }
 
+h1 {
+  font-family: 'Roboto', sans-serif;
+}
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -12,9 +16,13 @@ header {
           justify-content: center;
 }
 
+header img {
+  margin-top: 20px;
+}
+
 .accueil {
   margin-top: 20px;
-  padding-bottom: 40px;
+  padding-bottom: 140px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -31,15 +39,14 @@ header {
 
 .accueil .search {
   background-color: #eaeaea;
-  width: 100%;
-  font-size: 25px;
-  padding: 20px;
+  font-size: 35px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  width: 100%;
 }
 
 .accueil .search i,
@@ -67,7 +74,6 @@ header {
 }
 
 .fonctionnement {
-  margin: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -77,15 +83,46 @@ header {
           flex-direction: column;
 }
 
-.fonctionnement li {
-  font-size: 25px;
+.fonctionnement h2 {
   margin: 20px;
+  font-size: 67.5px;
+}
+
+.fonctionnement li {
+  font-size: 35px;
   padding: 40px;
-  width: 90%;
   text-align: center;
   -webkit-box-shadow: 0 0 20px #0000002e;
           box-shadow: 0 0 20px #0000002e;
-  border-radius: 20px;
+  border-radius: 30px;
+}
+
+.fonctionnement ol {
+  list-style: none;
+  margin-right: 20px;
+}
+
+.fonctionnement ol li {
+  margin: 0 0 0.5rem 0;
+  counter-increment: my-awesome-counter;
+  position: relative;
+}
+
+.fonctionnement ol li::before {
+  content: counter(my-awesome-counter);
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  position: absolute;
+  --size: 42px;
+  left: calc(-1 * var(--size) - -20px);
+  line-height: var(--size);
+  width: var(--size);
+  height: var(--size);
+  background: #9356DC;
+  border-radius: 50%;
+  -webkit-box-shadow: 1px 1px 0 #999;
+          box-shadow: 1px 1px 0 #999;
 }
 
 .restaurant_accueil {
@@ -117,8 +154,14 @@ header {
 }
 
 .restaurant_accueil .badge {
+  background-color: #99e2d0;
+  color: #269e80;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 5px;
+  width: 20%;
   position: absolute;
-  left: 750px;
+  right: 60px;
 }
 
 .restaurant_accueil .vignet {
@@ -130,18 +173,20 @@ header {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  width: 90%;
 }
 
 .restaurant_accueil .desc_article {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   width: 60%;
+}
+
+.restaurant_accueil .desc_article p,
+.restaurant_accueil .desc_article h3 {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .restaurant {
@@ -158,9 +203,9 @@ header {
 .restaurant .header_restaurant {
   border-top-left-radius: 80px;
   border-top-right-radius: 80px;
+  background-color: #f6f6f6;
   position: relative;
   bottom: 75px;
-  background-color: #f6f6f6;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -169,7 +214,7 @@ header {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  font-size: 25px;
+  font-size: 50px;
 }
 
 .restaurant img {
@@ -181,13 +226,13 @@ header {
 
 .carte {
   font-size: 30px;
+  padding: 10px;
+  margin: 20px;
 }
 
 .carte article {
   background-color: white;
   border-radius: 50px;
-  padding: 10px;
-  margin: 20px;
 }
 
 .carte .price {
@@ -246,6 +291,7 @@ footer img {
 
 footer ul {
   list-style-type: none;
+  margin-bottom: 0px;
 }
 
 footer li {
