@@ -16,8 +16,21 @@ header {
           justify-content: center;
 }
 
+header i {
+  font-size: 50px;
+  position: absolute;
+  --size: -26px;
+  left: calc(-1 * var(--size) - -20px);
+  line-height: var(--size);
+  width: var(--size);
+  height: var(--size);
+  top: 25px;
+  color: #353535;
+}
+
 header img {
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .accueil {
@@ -81,6 +94,7 @@ header img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin: 20px;
 }
 
 .fonctionnement h2 {
@@ -235,8 +249,12 @@ header img {
   border-radius: 50px;
 }
 
+.carte article h4,
+.carte article p {
+  margin: 20px;
+}
+
 .carte .price {
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -269,22 +287,15 @@ footer {
   background-color: #353535;
   color: white;
   font-size: 20px;
+  height: 250px;
 }
 
 footer img {
   height: 20px;
   -o-object-fit: cover;
      object-fit: cover;
-  -webkit-margin-before: 1em;
-          margin-block-start: 1em;
-  -webkit-margin-after: 1em;
-          margin-block-end: 1em;
-  -webkit-margin-start: 0px;
-          margin-inline-start: 0px;
-  -webkit-margin-end: 0px;
-          margin-inline-end: 0px;
-  -webkit-padding-start: 40px;
-          padding-inline-start: 40px;
+  margin-top: 40px;
+  margin-left: 40px;
   -webkit-filter: invert(100%);
           filter: invert(100%);
 }
@@ -292,10 +303,16 @@ footer img {
 footer ul {
   list-style-type: none;
   margin-bottom: 0px;
+  padding: 0px;
+  margin-left: 40px;
+}
+
+footer ul i {
+  margin-right: 12px;
 }
 
 footer li {
-  margin: 5px;
+  margin-top: 15px;
 }
 
 footer a {
