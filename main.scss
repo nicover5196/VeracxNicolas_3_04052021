@@ -77,28 +77,36 @@ header {
         font-size: 67.5px;
     }
     li {
-        font-size: 35px;
+        font-size: 40px;
         padding: 40px;
         text-align: center;
         box-shadow: 0 0 20px #0000002e;
         border-radius: 30px;
+        i {
+            color: grey;
+            position: relative;
+            right: 70px;
+            font-size: 60px;
+        }
     }
     ol {
         list-style: none;
-        margin-right: 20px;
+        margin: 10px;
+        padding: 0px;
     }
     ol li {
-        margin: 0 0 0.5rem 0;
-        counter-increment: my-awesome-counter;
+        margin: 50px;
+        counter-increment: ohmyfood-counter;
         position: relative;
+        background-color: $colour-gris_clair;
     }
     ol li::before {
-        content: counter(my-awesome-counter);
+        content: counter(ohmyfood-counter);
         color: white;
         font-size: 1.5rem;
         font-weight: bold;
         position: absolute;
-        --size: 42px;
+        --size: 70px;
         left: calc(-1 * var(--size) - -20px);
         line-height: var(--size);
         width: var(--size);
@@ -106,6 +114,7 @@ header {
         background: $colour-primaire;
         border-radius: 50%;
         box-shadow: 1px 1px 0 #999;
+        margin-left: 1px;
     }
 }
 
@@ -127,19 +136,19 @@ header {
         object-fit: cover;
     }
     .badge {
-        background-color: rgb(153, 226, 208);
-        color: rgb(38, 158, 128);
+        background-color: $colour-background-nouveau;
+        color: $colour-nouveau;
         font-weight: bold;
         padding: 10px;
         border-radius: 5px;
         width: 20%;
         position: absolute;
         right: 60px;
+        margin-top: 30px;
     }
     .vignet {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
+        @include flex_around;
+        margin-bottom: 25px;
     }
     .desc_article {
         flex-direction: column;
@@ -153,6 +162,13 @@ header {
 }
 
 // menu_restaurant
+.header_restaurant {
+    h2 {
+        font-weight: bold;
+        font-style: italic;
+    }
+}
+
 .restaurant {
     background-color: $colour-gris_clair;
     @include flex_column;
@@ -162,9 +178,7 @@ header {
         background-color: $colour-gris_clair;
         position: relative;
         bottom: 75px;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
+        @include flex_around;
         font-size: 50px;
     }
     img {
@@ -178,12 +192,28 @@ header {
     font-size: 30px;
     padding: 10px;
     margin: 20px;
+    h3 {
+        border-bottom: 4px solid $colour-tertiaire;
+        width: 10%;
+    }
     article {
         background-color: white;
         border-radius: 50px;
-        h4,
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        padding: 3%;
+        align-items: center;
+        h4 {
+            width: 100%;
+            margin: 0px;
+            font-size: 40px;
+        }
         p {
-            margin: 20px;
+            margin: 0px;
+            width: 80%;
+            font-size: 35px;
         }
     }
     .price {
@@ -237,5 +267,21 @@ footer {
     a {
         color: white;
         text-decoration: none;
+    }
+}
+
+@media only screen and ( min-width: 1201px) {
+    body {
+        width: 1600px;
+        margin: auto;
+        zoom: 50%;
+    }
+    .restaurant_accueil {
+        .badge {
+            display: none;
+        }
+    }
+    header i {
+        left: calc(-1 * var(--size) - -1200px);
     }
 }

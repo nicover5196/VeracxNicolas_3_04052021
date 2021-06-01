@@ -103,7 +103,7 @@ header img {
 }
 
 .fonctionnement li {
-  font-size: 35px;
+  font-size: 40px;
   padding: 40px;
   text-align: center;
   -webkit-box-shadow: 0 0 20px #0000002e;
@@ -111,24 +111,33 @@ header img {
   border-radius: 30px;
 }
 
+.fonctionnement li i {
+  color: grey;
+  position: relative;
+  right: 70px;
+  font-size: 60px;
+}
+
 .fonctionnement ol {
   list-style: none;
-  margin-right: 20px;
+  margin: 10px;
+  padding: 0px;
 }
 
 .fonctionnement ol li {
-  margin: 0 0 0.5rem 0;
-  counter-increment: my-awesome-counter;
+  margin: 50px;
+  counter-increment: ohmyfood-counter;
   position: relative;
+  background-color: #f6f6f6;
 }
 
 .fonctionnement ol li::before {
-  content: counter(my-awesome-counter);
+  content: counter(ohmyfood-counter);
   color: white;
   font-size: 1.5rem;
   font-weight: bold;
   position: absolute;
-  --size: 42px;
+  --size: 70px;
   left: calc(-1 * var(--size) - -20px);
   line-height: var(--size);
   width: var(--size);
@@ -137,6 +146,7 @@ header img {
   border-radius: 50%;
   -webkit-box-shadow: 1px 1px 0 #999;
           box-shadow: 1px 1px 0 #999;
+  margin-left: 1px;
 }
 
 .restaurant_accueil {
@@ -176,6 +186,7 @@ header img {
   width: 20%;
   position: absolute;
   right: 60px;
+  margin-top: 30px;
 }
 
 .restaurant_accueil .vignet {
@@ -187,6 +198,7 @@ header img {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  margin-bottom: 25px;
 }
 
 .restaurant_accueil .desc_article {
@@ -201,6 +213,11 @@ header img {
 .restaurant_accueil .desc_article h3 {
   margin-top: 10px;
   margin-bottom: 10px;
+}
+
+.header_restaurant h2 {
+  font-weight: bold;
+  font-style: italic;
 }
 
 .restaurant {
@@ -244,14 +261,39 @@ header img {
   margin: 20px;
 }
 
+.carte h3 {
+  border-bottom: 4px solid #99E2D0;
+  width: 10%;
+}
+
 .carte article {
   background-color: white;
   border-radius: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 20px;
+  padding: 3%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.carte article h4,
+.carte article h4 {
+  width: 100%;
+  margin: 0px;
+  font-size: 40px;
+}
+
 .carte article p {
-  margin: 20px;
+  margin: 0px;
+  width: 80%;
+  font-size: 35px;
 }
 
 .carte .price {
@@ -318,5 +360,19 @@ footer li {
 footer a {
   color: white;
   text-decoration: none;
+}
+
+@media only screen and (min-width: 1201px) {
+  body {
+    width: 1600px;
+    margin: auto;
+    zoom: 50%;
+  }
+  .restaurant_accueil .badge {
+    display: none;
+  }
+  header i {
+    left: calc(-1 * var(--size) - -1200px);
+  }
 }
 /*# sourceMappingURL=main.css.map */

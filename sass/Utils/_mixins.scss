@@ -2,3 +2,9 @@
     display: flex;
     flex-direction: column;
 }
+
+@mixin flex_around {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
