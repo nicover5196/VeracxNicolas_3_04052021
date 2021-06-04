@@ -94,12 +94,22 @@ header img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 20px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-left: 20px;
 }
 
 .fonctionnement h2 {
   margin: 20px;
   font-size: 67.5px;
+}
+
+.fonctionnement .color {
+  background-color: #f2eafb;
+}
+
+.fonctionnement .color i {
+  color: #9356DC;
 }
 
 .fonctionnement li {
@@ -166,6 +176,8 @@ header img {
   background-color: white;
   margin: 20px;
   border-radius: 50px;
+  -webkit-box-shadow: 4px 4px 4px lightgrey;
+          box-shadow: 4px 4px 4px lightgrey;
 }
 
 .restaurant_accueil img {
@@ -213,6 +225,15 @@ header img {
 .restaurant_accueil .desc_article h3 {
   margin-top: 10px;
   margin-bottom: 10px;
+}
+
+.restaurant_accueil i:hover {
+  -webkit-transition: 1s;
+  transition: 1s;
+  cursor: pointer;
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+  background: linear-gradient(-10deg, #9356DC, #FF79DA);
 }
 
 .header_restaurant h2 {
@@ -328,12 +349,12 @@ header img {
 footer {
   background-color: #353535;
   color: white;
-  font-size: 20px;
-  height: 250px;
+  font-size: 30px;
+  padding: 30px;
 }
 
 footer img {
-  height: 20px;
+  height: 30px;
   -o-object-fit: cover;
      object-fit: cover;
   margin-top: 40px;
@@ -366,13 +387,9 @@ footer a {
   body {
     width: 1600px;
     margin: auto;
-    zoom: 50%;
   }
   .restaurant_accueil .badge {
     display: none;
-  }
-  header i {
-    left: calc(-1 * var(--size) - -1200px);
   }
 }
 /*# sourceMappingURL=main.css.map */

@@ -71,10 +71,18 @@ header {
 
 .fonctionnement {
     @include flex_column;
-    margin: 20px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: 20px;
     h2 {
         margin: 20px;
         font-size: 67.5px;
+    }
+    .color {
+        background-color: #f2eafb;
+        i {
+            color: #9356DC;
+        }
     }
     li {
         font-size: 40px;
@@ -127,6 +135,7 @@ header {
         background-color: white;
         margin: 20px;
         border-radius: 50px;
+        box-shadow: 4px 4px 4px lightgrey;
     }
     img {
         border-top-left-radius: 50px;
@@ -158,6 +167,12 @@ header {
             margin-top: 10px;
             margin-bottom: 10px;
         }
+    }
+    i:hover {
+        transition: 1s;
+        cursor: pointer;
+        transform: scale(1.3);
+        background: linear-gradient(-10deg, $colour-primaire, $colour-secondaire);
     }
 }
 
@@ -243,10 +258,10 @@ header {
 footer {
     background-color: $colour-footer;
     color: white;
-    font-size: 20px;
-    height: 250px;
+    font-size: 30px;
+    padding: 30px;
     img {
-        height: 20px;
+        height: 30px;
         object-fit: cover;
         margin-top: 40px;
         margin-left: 40px;
@@ -274,14 +289,10 @@ footer {
     body {
         width: 1600px;
         margin: auto;
-        zoom: 50%;
     }
     .restaurant_accueil {
         .badge {
             display: none;
         }
-    }
-    header i {
-        left: calc(-1 * var(--size) - -1200px);
     }
 }
