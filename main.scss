@@ -4,9 +4,6 @@
 body {
     margin: 0px;
     padding: 0px;
-}
-
-h1 {
     font-family: 'Roboto', sans-serif;
 }
 
@@ -66,6 +63,13 @@ header {
         font-size: 45px;
         color: white;
         background: linear-gradient(-10deg, $colour-primaire, $colour-secondaire);
+        box-shadow: 0 0 20px #0000002e;
+        transition: 0.3s;
+    }
+    button:hover {
+        box-shadow: 20px 20px 40px #0000002e;
+        filter: brightness(1.1);
+        cursor: pointer;
     }
 }
 
@@ -133,7 +137,7 @@ header {
     article {
         @include flex_column;
         background-color: white;
-        margin: 20px;
+        margin-bottom: 50px;
         border-radius: 50px;
         box-shadow: 4px 4px 4px lightgrey;
     }
@@ -169,10 +173,13 @@ header {
         }
     }
     i:hover {
-        transition: 1s;
         cursor: pointer;
-        transform: scale(1.3);
-        background: linear-gradient(-10deg, $colour-primaire, $colour-secondaire);
+        // background: linear-gradient(-10deg, $colour-primaire, $colour-secondaire);
+        transition-duration: 1s;
+        color: $colour-primaire;
+    }
+    .icon_article a {
+        color: inherit;
     }
 }
 
@@ -221,13 +228,13 @@ header {
         padding: 3%;
         align-items: center;
         h4 {
-            width: 100%;
+            width: 70%;
             margin: 0px;
             font-size: 40px;
         }
         p {
             margin: 0px;
-            width: 80%;
+            width: 70%;
             font-size: 35px;
         }
     }
@@ -236,6 +243,14 @@ header {
         align-items: flex-end;
         justify-content: flex-end;
         font-size: 50px;
+        transition: 3s;
+        width: 30%;
+    }
+    article:hover {
+        background: linear-gradient(to right, white 80%, $colour-background-nouveau 20%);
+        .price:hover {
+            justify-content: flex-start;
+        }
     }
     button {
         display: block;
@@ -251,6 +266,13 @@ header {
         font-size: 45px;
         color: white;
         background: linear-gradient(-10deg, $colour-primaire, $colour-secondaire);
+        box-shadow: 0 0 20px #0000002e;
+        transition: 0.3s;
+    }
+    button:hover {
+        box-shadow: 20px 20px 40px #0000002e;
+        filter: brightness(1.1);
+        cursor: pointer;
     }
 }
 
@@ -285,7 +307,7 @@ footer {
     }
 }
 
-@media only screen and ( min-width: 1201px) {
+@media only screen and ( min-width: 1200px) {
     body {
         width: 1600px;
         margin: auto;
