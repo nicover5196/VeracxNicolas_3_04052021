@@ -81,7 +81,7 @@ header {
         margin: 20px;
         font-size: 67.5px;
     }
-    .color {
+    .color:hover {
         background-color: #f2eafb;
         i {
             color: #9356DC;
@@ -179,8 +179,8 @@ header {
         .far.fa-heart:hover {
             display: none;
         }
-        .fas.fa-heart:before {
-            opacity: 1;
+        .fas.fa-heart {
+            opacity: 0;
             background-color: linear-gradient(lighten(#FF79DA, 5%), lighten(#9356DC, 5%));
             // color: rgb(255, 121, 218);
             // color: linear-gradient(6deg, rgba(255, 121, 218, 1) 0%, rgba(147, 86, 220, 1) 100%);

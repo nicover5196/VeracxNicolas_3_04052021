@@ -112,11 +112,11 @@ header img {
   font-size: 67.5px;
 }
 
-.fonctionnement .color {
+.fonctionnement .color:hover {
   background-color: #f2eafb;
 }
 
-.fonctionnement .color i {
+.fonctionnement .color:hover i {
   color: #9356DC;
 }
 
@@ -243,8 +243,8 @@ header img {
   display: none;
 }
 
-.restaurant_accueil .icon_article .fas.fa-heart:before {
-  opacity: 1;
+.restaurant_accueil .icon_article .fas.fa-heart {
+  opacity: 0;
   background-color: linear-gradient(#ff93e1, #a16be0);
 }
 
