@@ -2,6 +2,99 @@ body {
   margin: 0px;
   padding: 0px;
   font-family: 'Roboto', sans-serif;
+  -webkit-animation: body 3s;
+          animation: body 3s;
+}
+
+@-webkit-keyframes body {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 0.2;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes body {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 0.2;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.loader_food {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0px;
+  bottom: 0;
+  margin: auto;
+  width: 100px;
+  height: 100px;
+}
+
+.loader_food div {
+  display: inline-block;
+  position: absolute;
+  left: 8px;
+  width: 16px;
+  -webkit-animation: loader_food 1.2s cubic-bezier(0, 0.5, 0.5, 1) 3;
+          animation: loader_food 1.2s cubic-bezier(0, 0.5, 0.5, 1) 3;
+}
+
+.loader_food div:nth-child(1) {
+  left: 8px;
+  -webkit-animation-delay: -0.24s;
+          animation-delay: -0.24s;
+  background-color: #9356DC;
+}
+
+.loader_food div:nth-child(2) {
+  left: 32px;
+  -webkit-animation-delay: -0.12s;
+          animation-delay: -0.12s;
+  background-color: #FF79DA;
+}
+
+.loader_food div:nth-child(3) {
+  left: 56px;
+  -webkit-animation-delay: 0;
+          animation-delay: 0;
+  background-color: #99E2D0;
+}
+
+@-webkit-keyframes loader_food {
+  0% {
+    top: 8px;
+    height: 64px;
+  }
+  50%,
+  100% {
+    top: 24px;
+    height: 32px;
+  }
+}
+
+@keyframes loader_food {
+  0% {
+    top: 8px;
+    height: 64px;
+  }
+  50%,
+  100% {
+    top: 24px;
+    height: 32px;
+  }
 }
 
 header {
@@ -235,27 +328,45 @@ header img {
   margin-bottom: 10px;
 }
 
-.restaurant_accueil .icon_article .far.fa-heart {
-  color: grey;
+.restaurant_accueil .icon_article {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  background-color: #9356DC;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  cursor: pointer;
+  margin-top: 3px;
 }
 
-.restaurant_accueil .icon_article .far.fa-heart:hover {
-  display: none;
+.restaurant_accueil .icon_article i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1px;
+  font-size: 32px;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+  color: #7E7E7E;
+  background-color: white;
+}
+
+.restaurant_accueil .icon_article:hover i {
+  opacity: 0;
+}
+
+.restaurant_accueil .icon_article:hover .fas.fa-heart {
+  opacity: 1;
 }
 
 .restaurant_accueil .icon_article .fas.fa-heart {
-  opacity: 0;
-  background-color: linear-gradient(#ff93e1, #a16be0);
-}
-
-.restaurant_accueil .icon_article .fas.fa-heart:hover {
   opacity: 1;
-  background-color: linear-gradient(#ff93e1, #a16be0);
+  background-color: white;
+  mix-blend-mode: lighten;
 }
 
 .header_restaurant h2 {
-  font-weight: bold;
-  font-style: italic;
+  font-family: 'Shrikhand', 'Roboto', sans-serif;
 }
 
 .restaurant {
@@ -281,9 +392,35 @@ header img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
   font-size: 50px;
+}
+
+.restaurant .header_restaurant h2 {
+  margin-left: 40px;
+}
+
+.restaurant .header_restaurant i {
+  font-size: 32px;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  margin-top: 3px;
+  position: absolute;
+  right: 150px;
+}
+
+.restaurant .header_restaurant .fas.fa-heart {
+  opacity: 0;
+}
+
+.restaurant .header_restaurant .fas.fa-heart:hover {
+  opacity: 1;
+}
+
+.restaurant .header_restaurant i:hover {
+  color: #9356DC;
 }
 
 .restaurant img {
@@ -297,11 +434,13 @@ header img {
   font-size: 30px;
   padding: 10px;
   margin: 20px;
+  margin-top: 0;
 }
 
 .carte h3 {
   border-bottom: 4px solid #99E2D0;
   width: 10%;
+  margin-bottom: 50px;
 }
 
 .carte article {
@@ -315,7 +454,7 @@ header img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   padding: 3%;
   -webkit-box-align: center;
       -ms-flex-align: center;
