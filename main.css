@@ -43,7 +43,7 @@ header img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 45px;
+  font-size: 43px;
   background-color: #f6f6f6;
 }
 
@@ -69,7 +69,6 @@ header img {
 .accueil .pub {
   text-align: center;
   width: 76%;
-  margin: 25px;
 }
 
 .accueil button {
@@ -103,7 +102,7 @@ header img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-top: 100px;
+  margin-top: 80px;
   margin-bottom: 100px;
   margin-left: 20px;
 }
@@ -236,15 +235,22 @@ header img {
   margin-bottom: 10px;
 }
 
-.restaurant_accueil i:hover {
-  cursor: pointer;
-  -webkit-transition-duration: 1s;
-          transition-duration: 1s;
-  color: #9356DC;
+.restaurant_accueil .icon_article .far.fa-heart {
+  color: grey;
 }
 
-.restaurant_accueil .icon_article a {
-  color: inherit;
+.restaurant_accueil .icon_article .far.fa-heart:hover {
+  display: none;
+}
+
+.restaurant_accueil .icon_article .fas.fa-heart:before {
+  opacity: 1;
+  background-color: linear-gradient(#ff93e1, #a16be0);
+}
+
+.restaurant_accueil .icon_article .fas.fa-heart:hover {
+  opacity: 1;
+  background-color: linear-gradient(#ff93e1, #a16be0);
 }
 
 .header_restaurant h2 {
@@ -314,6 +320,8 @@ header img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-animation: apparationmenu 1s;
+          animation: apparationmenu 1s;
 }
 
 .carte article h4 {
@@ -328,6 +336,32 @@ header img {
   font-size: 35px;
 }
 
+@-webkit-keyframes apparationmenu {
+  from {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes apparationmenu {
+  from {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 .carte .price {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -339,8 +373,6 @@ header img {
       -ms-flex-pack: end;
           justify-content: flex-end;
   font-size: 50px;
-  -webkit-transition: 3s;
-  transition: 3s;
   width: 30%;
 }
 
@@ -349,7 +381,7 @@ header img {
   background: linear-gradient(to right, white 80%, #99e2d0 20%);
 }
 
-.carte article:hover .price:hover {
+.carte article:hover .price {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;

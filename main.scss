@@ -34,7 +34,7 @@ header {
     padding-bottom: 140px;
     @include flex_column;
     align-items: center;
-    font-size: 45px;
+    font-size: 43px;
     background-color: $colour-gris_clair;
     .search {
         background-color: $colour-gris_sombre;
@@ -52,7 +52,6 @@ header {
     .pub {
         text-align: center;
         width: 76%;
-        margin: 25px;
     }
     button {
         border-radius: 60px;
@@ -75,7 +74,7 @@ header {
 
 .fonctionnement {
     @include flex_column;
-    margin-top: 100px;
+    margin-top: 80px;
     margin-bottom: 100px;
     margin-left: 20px;
     h2 {
@@ -172,14 +171,24 @@ header {
             margin-bottom: 10px;
         }
     }
-    i:hover {
-        cursor: pointer;
-        // background: linear-gradient(-10deg, $colour-primaire, $colour-secondaire);
-        transition-duration: 1s;
-        color: $colour-primaire;
-    }
-    .icon_article a {
-        color: inherit;
+    .icon_article {
+        // transition: color 0.5s;
+        .far.fa-heart {
+            color: grey;
+        }
+        .far.fa-heart:hover {
+            display: none;
+        }
+        .fas.fa-heart:before {
+            opacity: 1;
+            background-color: linear-gradient(lighten(#FF79DA, 5%), lighten(#9356DC, 5%));
+            // color: rgb(255, 121, 218);
+            // color: linear-gradient(6deg, rgba(255, 121, 218, 1) 0%, rgba(147, 86, 220, 1) 100%);
+        }
+        .fas.fa-heart:hover {
+            opacity: 1;
+            background-color: linear-gradient(lighten(#FF79DA, 5%), lighten(#9356DC, 5%));
+        }
     }
 }
 
@@ -227,6 +236,7 @@ header {
         margin-bottom: 20px;
         padding: 3%;
         align-items: center;
+        animation: apparationmenu 1s;
         h4 {
             width: 70%;
             margin: 0px;
@@ -238,17 +248,26 @@ header {
             font-size: 35px;
         }
     }
+    @keyframes apparationmenu {
+        from {
+            transform: translateY(50px);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
     .price {
         display: flex;
         align-items: flex-end;
         justify-content: flex-end;
         font-size: 50px;
-        transition: 3s;
         width: 30%;
     }
     article:hover {
         background: linear-gradient(to right, white 80%, $colour-background-nouveau 20%);
-        .price:hover {
+        .price {
             justify-content: flex-start;
         }
     }
