@@ -485,6 +485,9 @@ header img {
   margin: 0px;
   width: 70%;
   font-size: 35px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 @-webkit-keyframes apparationmenu {
@@ -650,7 +653,6 @@ footer a {
 
 @media only screen and (min-width: 1200px) {
   body {
-    width: 1600px;
     margin: auto;
   }
   body .search {
@@ -702,6 +704,9 @@ footer a {
   }
   .restaurant_accueil .badge {
     display: none;
+  }
+  .restaurant_accueil img {
+    width: 600px;
   }
   .carte .fas.fa-check-circle {
     -webkit-transform: scale(0);

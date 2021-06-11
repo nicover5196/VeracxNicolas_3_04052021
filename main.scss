@@ -367,6 +367,9 @@ header {
             margin: 0px;
             width: 70%;
             font-size: 35px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
         }
     }
     @keyframes apparationmenu {
@@ -470,7 +473,6 @@ footer {
 
 @media only screen and ( min-width: 1200px) {
     body {
-        width: 1600px;
         margin: auto;
         .search {
             font-size: 22px;
@@ -520,6 +522,9 @@ footer {
         }
         .badge {
             display: none;
+        }
+        img {
+            width: 600px;
         }
     }
     .carte .fas.fa-check-circle {
