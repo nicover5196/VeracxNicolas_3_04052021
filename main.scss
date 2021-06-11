@@ -97,12 +97,19 @@ header {
     align-items: center;
     font-size: 43px;
     background-color: $colour-gris_clair;
+    .badge {
+        padding: 15px;
+    }
     .search {
         background-color: $colour-gris_sombre;
         font-size: 35px;
         display: flex;
         justify-content: center;
         width: 100%;
+        color: #3a3a3a;
+        -webkit-box-shadow: inset 0px 23px 36px -28px rgba(58, 58, 58, 1);
+        -moz-box-shadow: inset 0px 23px 36px -28px rgba(58, 58, 58, 1);
+        box-shadow: inset 0px 23px 36px -28px rgba(58, 58, 58, 1);
         i,
         .ville {
             margin: 20px;
@@ -488,6 +495,9 @@ footer {
             li i {
                 font-size: 22px;
             }
+            .fas.fa-mobile-alt {
+                right: 60px;
+            }
         }
     }
     .restaurant_accueil {
@@ -509,6 +519,15 @@ footer {
         transform: scale(0);
         position: absolute;
         right: 315px;
+    }
+    .restaurant .header_restaurant h2 {
+        margin-left: 200px;
+        font-size: 28px;
+    }
+    .carte {
+        h3 {
+            font-size: 26px;
+        }
     }
 }
 

@@ -140,6 +140,10 @@ header img {
   background-color: #f6f6f6;
 }
 
+.accueil .badge {
+  padding: 15px;
+}
+
 .accueil .search {
   background-color: #eaeaea;
   font-size: 35px;
@@ -150,6 +154,9 @@ header img {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
+  color: #3a3a3a;
+  -webkit-box-shadow: inset 0px 23px 36px -28px #3a3a3a;
+  box-shadow: inset 0px 23px 36px -28px #3a3a3a;
 }
 
 .accueil .search i,
@@ -668,6 +675,9 @@ footer a {
   body .fonctionnement li i {
     font-size: 22px;
   }
+  body .fonctionnement .fas.fa-mobile-alt {
+    right: 60px;
+  }
   .restaurant_accueil h2 {
     font-size: 26px;
   }
@@ -685,6 +695,13 @@ footer a {
     transform: scale(0);
     position: absolute;
     right: 315px;
+  }
+  .restaurant .header_restaurant h2 {
+    margin-left: 200px;
+    font-size: 28px;
+  }
+  .carte h3 {
+    font-size: 26px;
   }
 }
 
