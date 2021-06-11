@@ -703,6 +703,20 @@ footer a {
   .carte h3 {
     font-size: 26px;
   }
+  .carte article h4 {
+    font-size: 24px;
+  }
+  .carte article p {
+    font-size: 22px;
+  }
+  .carte .price {
+    font-size: 30px;
+    width: 22%;
+  }
+  .carte button {
+    font-size: 22px;
+    width: 20%;
+  }
 }
 
 footer {
