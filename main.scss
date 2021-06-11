@@ -511,8 +511,15 @@ footer {
         }
     }
     .restaurant_accueil {
+        .article_restaurant {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
         h2 {
             font-size: 28px;
+            text-align: center;
         }
         h3 {
             font-size: 26px;
@@ -524,7 +531,8 @@ footer {
             display: none;
         }
         img {
-            width: 600px;
+            width: 650px;
+            height: 350px;
         }
     }
     .carte .fas.fa-check-circle {
@@ -538,6 +546,13 @@ footer {
         font-size: 28px;
     }
     .carte {
+        article {
+            margin: 25px;
+            padding: 18px;
+        }
+        .carte_menu {
+            display: flex;
+        }
         h3 {
             font-size: 26px;
         }
