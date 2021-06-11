@@ -665,12 +665,25 @@ footer a {
   body .accueil button {
     font-size: 22px;
     width: auto;
+    padding: 15px;
   }
   body .fonctionnement h2 {
     font-size: 26px;
   }
   body .fonctionnement ol li {
     font-size: 22px;
+    margin: 30px;
+    padding: 25px;
+  }
+  body .fonctionnement ol li::before {
+    --size: 34px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   body .fonctionnement li i {
     font-size: 22px;
@@ -716,6 +729,7 @@ footer a {
   .carte button {
     font-size: 22px;
     width: 20%;
+    padding: 15px;
   }
 }
 
