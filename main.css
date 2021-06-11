@@ -200,6 +200,10 @@ header img {
   margin-left: 20px;
 }
 
+.fonctionnement .fas.fa-mobile-alt {
+  right: 50px;
+}
+
 .fonctionnement h2 {
   margin: 20px;
   font-size: 67.5px;
@@ -343,7 +347,6 @@ header img {
   position: absolute;
   top: 0;
   left: 0;
-  padding: 1px;
   font-size: 32px;
   -webkit-transition: opacity 0.2s ease-in-out;
   transition: opacity 0.2s ease-in-out;

@@ -138,6 +138,9 @@ header {
     margin-top: 80px;
     margin-bottom: 100px;
     margin-left: 20px;
+    .fas.fa-mobile-alt {
+        right: 50px;
+    }
     h2 {
         margin: 20px;
         font-size: 67.5px;
@@ -245,7 +248,6 @@ header {
         position: absolute;
         top: 0;
         left: 0;
-        padding: 1px;
         font-size: 32px;
         transition: opacity 0.2s ease-in-out;
         color: #7E7E7E;
