@@ -463,6 +463,30 @@ footer {
     body {
         width: 1600px;
         margin: auto;
+        .search {
+            font-size: 22px;
+            .ville {
+                font-size: 22px;
+            }
+        }
+        .accueil {
+            font-size: 22px;
+            button {
+                font-size: 22px;
+                width: auto;
+            }
+        }
+        .fonctionnement {
+            h2 {
+                font-size: 26px;
+            }
+            ol li {
+                font-size: 22px;
+            }
+            li i {
+                font-size: 22px;
+            }
+        }
     }
     .restaurant_accueil {
         .badge {
