@@ -461,6 +461,8 @@ header img {
           align-items: center;
   -webkit-animation: apparationmenu 1s;
           animation: apparationmenu 1s;
+  -webkit-box-shadow: 0 0 20px #0000002e;
+          box-shadow: 0 0 20px #0000002e;
 }
 
 .carte article h4 {
@@ -524,6 +526,51 @@ header img {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+}
+
+.carte article:hover .fas.fa-check-circle {
+  -webkit-transform: scale(2);
+          transform: scale(2);
+  color: white;
+  -webkit-animation: circlerotate 0.8s;
+          animation: circlerotate 0.8s;
+}
+
+.carte .fas.fa-check-circle {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  position: absolute;
+  right: 115px;
+}
+
+@-webkit-keyframes circlerotate {
+  0% {
+    -webkit-transform: translateX(100px) rotate(240deg);
+            transform: translateX(100px) rotate(240deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+    -webkit-transform: scale(2);
+            transform: scale(2);
+  }
+}
+
+@keyframes circlerotate {
+  0% {
+    -webkit-transform: translateX(100px) rotate(240deg);
+            transform: translateX(100px) rotate(240deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+    -webkit-transform: scale(2);
+            transform: scale(2);
+  }
 }
 
 .carte button {
@@ -598,6 +645,12 @@ footer a {
   }
   .restaurant_accueil .badge {
     display: none;
+  }
+  .carte .fas.fa-check-circle {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    position: absolute;
+    right: 315px;
   }
 }
 /*# sourceMappingURL=main.css.map */
