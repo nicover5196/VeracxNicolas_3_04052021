@@ -489,6 +489,15 @@ footer {
         }
     }
     .restaurant_accueil {
+        h2 {
+            font-size: 26px;
+        }
+        h3 {
+            font-size: 26px;
+        }
+        p {
+            font-size: 22px;
+        }
         .badge {
             display: none;
         }
@@ -499,4 +508,8 @@ footer {
         position: absolute;
         right: 315px;
     }
+}
+
+footer {
+    font-size: 22px;
 }

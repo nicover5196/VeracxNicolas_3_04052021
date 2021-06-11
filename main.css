@@ -665,6 +665,15 @@ footer a {
   body .fonctionnement li i {
     font-size: 22px;
   }
+  .restaurant_accueil h2 {
+    font-size: 26px;
+  }
+  .restaurant_accueil h3 {
+    font-size: 26px;
+  }
+  .restaurant_accueil p {
+    font-size: 22px;
+  }
   .restaurant_accueil .badge {
     display: none;
   }
@@ -674,5 +683,9 @@ footer a {
     position: absolute;
     right: 315px;
   }
+}
+
+footer {
+  font-size: 22px;
 }
 /*# sourceMappingURL=main.css.map */
