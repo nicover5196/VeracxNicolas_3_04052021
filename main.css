@@ -9,6 +9,7 @@ body {
 @-webkit-keyframes body {
   0% {
     opacity: 0.1;
+    background-color: black;
   }
   100% {
     opacity: 1;
@@ -18,6 +19,7 @@ body {
 @keyframes body {
   0% {
     opacity: 0.1;
+    background-color: black;
   }
   100% {
     opacity: 1;
@@ -445,6 +447,7 @@ header img {
           animation: apparationmenu 1s;
   -webkit-box-shadow: 0 0 20px #0000002e;
           box-shadow: 0 0 20px #0000002e;
+  cursor: pointer;
 }
 
 .carte article h4 {
@@ -641,6 +644,9 @@ footer a {
     width: auto;
     padding: 15px;
   }
+  body .fonctionnement li {
+    cursor: pointer;
+  }
   body .fonctionnement h2 {
     font-size: 26px;
   }
@@ -703,11 +709,12 @@ footer a {
   }
   .restaurant .header_restaurant h2 {
     margin-left: 200px;
-    font-size: 28px;
+    font-size: 35px;
   }
   .carte article {
     margin: 25px;
     padding: 18px;
+    width: 100%;
   }
   .carte .carte_menu {
     display: -webkit-box;
@@ -736,5 +743,6 @@ footer a {
 
 footer {
   font-size: 22px;
+  text-align: center;
 }
 /*# sourceMappingURL=main.css.map */

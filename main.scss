@@ -11,6 +11,7 @@ body {
 @keyframes body {
     0% {
         opacity: 0.1;
+        background-color: black;
     }
     100% {
         opacity: 1;
@@ -321,6 +322,7 @@ header {
         align-items: center;
         animation: apparationmenu 1s;
         box-shadow: 0 0 20px #0000002e;
+        cursor: pointer;
         h4 {
             width: 70%;
             margin: 0px;
@@ -452,6 +454,9 @@ footer {
             }
         }
         .fonctionnement {
+            li {
+                cursor: pointer;
+            }
             h2 {
                 font-size: 26px;
             }
@@ -506,12 +511,13 @@ footer {
     }
     .restaurant .header_restaurant h2 {
         margin-left: 200px;
-        font-size: 28px;
+        font-size: 35px;
     }
     .carte {
         article {
             margin: 25px;
             padding: 18px;
+            width: 100%;
         }
         .carte_menu {
             display: flex;
@@ -539,4 +545,5 @@ footer {
 
 footer {
     font-size: 22px;
+    text-align: center;
 }
