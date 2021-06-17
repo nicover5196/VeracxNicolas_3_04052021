@@ -344,7 +344,6 @@ header {
         h4,
         p {
             margin: 10px;
-            font-size: 26px;
         }
     }
     .menu_price {
@@ -382,28 +381,30 @@ header {
             opacity: 1;
         }
     }
-    button {
-        display: block;
-        position: relative;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 100px;
-        margin-top: 100px;
-        border-radius: 60px;
-        border: 0.125rem;
-        padding: 30px;
-        width: 60%;
-        font-size: 45px;
-        color: white;
-        background: linear-gradient(-10deg, $colour-primaire, $colour-secondaire);
-        box-shadow: 0 0 20px #0000002e;
-        transition: 0.3s;
-    }
-    button:hover {
-        box-shadow: 20px 20px 40px #0000002e;
-        filter: brightness(1.1);
-        cursor: pointer;
-    }
+}
+
+button {
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+    margin-top: 100px;
+    border-radius: 60px;
+    border: 0.125rem;
+    padding: 30px;
+    width: 60%;
+    font-size: 45px;
+    color: white;
+    background: linear-gradient(-10deg, $colour-primaire, $colour-secondaire);
+    box-shadow: 0 0 20px #0000002e;
+    transition: 0.3s;
+}
+
+button:hover {
+    box-shadow: 20px 20px 40px #0000002e;
+    filter: brightness(1.1);
+    cursor: pointer;
 }
 
 // footer
@@ -521,23 +522,47 @@ footer {
         margin-left: 200px;
         font-size: 35px;
     }
+    .palette {
+        display: flex;
+        justify-content: space-around;
+    }
     .carte {
         font-size: initial;
+        width: 100%;
+        .menu_price {
+            font-size: 20px;
+        }
         .carte_menu {
             display: flex;
         }
         h3 {
             font-size: initial;
         }
-        button {
-            font-size: initial;
-            width: 20%;
-            padding: 15px;
-        }
     }
-}
-
-footer {
-    font-size: initial;
-    text-align: center;
+    button {
+        display: block;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 100px;
+        margin-top: 100px;
+        border-radius: 60px;
+        border: 0.125rem;
+        padding: 15px;
+        width: 20%;
+        font-size: initial;
+        color: white;
+        background: linear-gradient(-10deg, $colour-primaire, $colour-secondaire);
+        box-shadow: 0 0 20px #0000002e;
+        transition: 0.3s;
+    }
+    button:hover {
+        box-shadow: 20px 20px 40px #0000002e;
+        filter: brightness(1.1);
+        cursor: pointer;
+    }
+    footer {
+        font-size: initial;
+        text-align: center;
+    }
 }
