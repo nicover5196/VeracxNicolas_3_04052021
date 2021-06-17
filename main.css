@@ -472,6 +472,8 @@ header img {
   padding: 1%;
   -webkit-transition: 0.6s;
   transition: 0.6s;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .carte .menu-content h4,
