@@ -8,3 +8,13 @@
     align-items: center;
     justify-content: space-around;
 }
+
+@mixin border_leftR {
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+
+@mixin border_rightR {
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}

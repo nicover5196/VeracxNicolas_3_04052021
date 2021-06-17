@@ -427,42 +427,107 @@ header img {
   margin-bottom: 50px;
 }
 
-.carte article {
-  background-color: white;
-  border-radius: 50px;
+.carte .menu {
+  margin-bottom: 20px;
+  margin-top: 20px;
+  overflow-x: hidden;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-bottom: 25px;
-  padding: 3%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-animation: apparationmenu 1s;
           animation: apparationmenu 1s;
-  -webkit-box-shadow: 0 0 20px #0000002e;
-          box-shadow: 0 0 20px #0000002e;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
   cursor: pointer;
 }
 
-.carte article h4 {
-  width: 70%;
-  margin: 0px;
-  font-size: 40px;
+.carte .menu:hover .menu-content {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 75%;
+          flex: 0 0 75%;
+  width: 75%;
 }
 
-.carte article p {
-  margin: 0px;
-  width: 70%;
-  font-size: 35px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+.carte .menu:hover i {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+.carte .menu:hover .menu_price {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.carte .menu-content {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 90%;
+          flex: 0 0 90%;
+  background: #fff;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  padding: 1%;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+
+.carte .menu-content h4,
+.carte .menu-content p {
+  margin: 10px;
+  font-size: 26px;
+}
+
+.carte .menu_price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 10%;
+          flex: 0 0 10%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #fff;
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+.carte .menu-badge {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 15%;
+          flex: 0 0 15%;
+  background: #99e2d0;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
   overflow: hidden;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.carte .menu-badge i {
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+  -webkit-transition: -webkit-transform 0.5s ease-in-out 0.1s;
+  transition: -webkit-transform 0.5s ease-in-out 0.1s;
+  transition: transform 0.5s ease-in-out 0.1s;
+  transition: transform 0.5s ease-in-out 0.1s, -webkit-transform 0.5s ease-in-out 0.1s;
+  font-size: 30px;
 }
 
 @-webkit-keyframes apparationmenu {
@@ -488,76 +553,6 @@ header img {
     -webkit-transform: translateY(0);
             transform: translateY(0);
     opacity: 1;
-  }
-}
-
-.carte .price {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  font-size: 50px;
-  width: 30%;
-}
-
-.carte article:hover {
-  background: -webkit-gradient(linear, left top, right top, color-stop(80%, white), color-stop(20%, #99e2d0));
-  background: linear-gradient(to right, white 80%, #99e2d0 20%);
-}
-
-.carte article:hover .price {
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-}
-
-.carte article:hover .fas.fa-check-circle {
-  -webkit-transform: scale(2);
-          transform: scale(2);
-  color: white;
-  -webkit-animation: circlerotate 0.8s;
-          animation: circlerotate 0.8s;
-}
-
-.carte .fas.fa-check-circle {
-  -webkit-transform: scale(0);
-          transform: scale(0);
-  position: absolute;
-  right: 115px;
-}
-
-@-webkit-keyframes circlerotate {
-  0% {
-    -webkit-transform: translateX(100px) rotate(240deg);
-            transform: translateX(100px) rotate(240deg);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-    opacity: 1;
-    -webkit-transform: scale(2);
-            transform: scale(2);
-  }
-}
-
-@keyframes circlerotate {
-  0% {
-    -webkit-transform: translateX(100px) rotate(240deg);
-            transform: translateX(100px) rotate(240deg);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-    opacity: 1;
-    -webkit-transform: scale(2);
-            transform: scale(2);
   }
 }
 
@@ -630,33 +625,49 @@ footer a {
   body {
     margin: auto;
   }
+  body .loader {
+    bottom: 300px;
+  }
   body .search {
     font-size: 22px;
   }
   body .search .ville {
-    font-size: 22px;
+    font-size: initial;
   }
   body .accueil {
-    font-size: 22px;
+    font-size: initial;
+    padding-bottom: 50px;
+  }
+  body .accueil .search i {
+    font-size: initial;
   }
   body .accueil button {
-    font-size: 22px;
+    font-size: initial;
     width: auto;
     padding: 15px;
+  }
+  body .fonctionnement {
+    margin: initial;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   body .fonctionnement li {
     cursor: pointer;
   }
   body .fonctionnement h2 {
-    font-size: 26px;
+    font-size: initial;
+  }
+  body .fonctionnement ol {
+    width: 50%;
   }
   body .fonctionnement ol li {
-    font-size: 22px;
+    font-size: initial;
     margin: 30px;
     padding: 25px;
   }
   body .fonctionnement ol li::before {
-    --size: 34px;
+    --size: 25px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -664,6 +675,7 @@ footer a {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    font-size: initial;
   }
   body .fonctionnement li i {
     font-size: 22px;
@@ -685,36 +697,28 @@ footer a {
         justify-content: space-around;
   }
   .restaurant_accueil h2 {
-    font-size: 28px;
+    font-size: initial;
     text-align: center;
   }
   .restaurant_accueil h3 {
-    font-size: 26px;
+    font-size: initial;
   }
   .restaurant_accueil p {
-    font-size: 22px;
+    font-size: initial;
   }
   .restaurant_accueil .badge {
     display: none;
   }
   .restaurant_accueil img {
-    width: 650px;
-    height: 350px;
-  }
-  .carte .fas.fa-check-circle {
-    -webkit-transform: scale(0);
-    transform: scale(0);
-    position: absolute;
-    right: 315px;
+    width: 350px;
+    height: 150px;
   }
   .restaurant .header_restaurant h2 {
     margin-left: 200px;
     font-size: 35px;
   }
-  .carte article {
-    margin: 25px;
-    padding: 18px;
-    width: 100%;
+  .carte {
+    font-size: initial;
   }
   .carte .carte_menu {
     display: -webkit-box;
@@ -722,27 +726,17 @@ footer a {
     display: flex;
   }
   .carte h3 {
-    font-size: 26px;
-  }
-  .carte article h4 {
-    font-size: 22px;
-  }
-  .carte article p {
-    font-size: 22px;
-  }
-  .carte .price {
-    font-size: 30px;
-    width: 22%;
+    font-size: initial;
   }
   .carte button {
-    font-size: 22px;
+    font-size: initial;
     width: 20%;
     padding: 15px;
   }
 }
 
 footer {
-  font-size: 22px;
+  font-size: initial;
   text-align: center;
 }
 /*# sourceMappingURL=main.css.map */
