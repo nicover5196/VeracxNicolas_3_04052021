@@ -328,8 +328,8 @@ header img {
 
 .restaurant_accueil .icon_article {
   position: relative;
-  width: 32px;
-  height: 32px;
+  width: 43px;
+  height: 44.5px;
   background-color: #9356DC;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
   background-image: linear-gradient(#FF79DA, #9356DC);
@@ -341,7 +341,7 @@ header img {
   position: absolute;
   top: 0;
   left: 0;
-  font-size: 32px;
+  font-size: 45px;
   -webkit-transition: opacity 0.2s ease-in-out;
   transition: opacity 0.2s ease-in-out;
   color: #7E7E7E;
