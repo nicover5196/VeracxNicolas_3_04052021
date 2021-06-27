@@ -449,8 +449,8 @@ header img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-animation: apparationmenu 1s;
-          animation: apparationmenu 1s;
+  -webkit-animation: apparationmenu 1.4s linear;
+          animation: apparationmenu 1.4s linear;
   border-top-left-radius: 50px;
   border-bottom-left-radius: 50px;
   border-top-right-radius: 50px;
@@ -546,8 +546,8 @@ header img {
 
 @-webkit-keyframes apparationmenu {
   from {
-    -webkit-transform: translateY(50px);
-            transform: translateY(50px);
+    -webkit-transform: translateY(80px);
+            transform: translateY(80px);
     opacity: 0;
   }
   to {
@@ -559,8 +559,8 @@ header img {
 
 @keyframes apparationmenu {
   from {
-    -webkit-transform: translateY(50px);
-            transform: translateY(50px);
+    -webkit-transform: translateY(80px);
+            transform: translateY(80px);
     opacity: 0;
   }
   to {

@@ -327,7 +327,7 @@ header {
         overflow-x: hidden;
         box-sizing: border-box;
         display: flex;
-        animation: apparationmenu 1s;
+        animation: apparationmenu 1.4s linear;
         @include border_leftR;
         @include border_rightR;
         cursor: pointer;
@@ -385,7 +385,7 @@ header {
     }
     @keyframes apparationmenu {
         from {
-            transform: translateY(50px);
+            transform: translateY(80px);
             opacity: 0;
         }
         to {
