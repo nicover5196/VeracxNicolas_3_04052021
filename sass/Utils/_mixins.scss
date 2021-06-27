@@ -10,11 +10,11 @@
 }
 
 @mixin border_leftR {
-    border-top-left-radius: 50px;
-    border-bottom-left-radius: 50px;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
 }
 
 @mixin border_rightR {
-    border-top-right-radius: 50px;
-    border-bottom-right-radius: 50px;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
 }

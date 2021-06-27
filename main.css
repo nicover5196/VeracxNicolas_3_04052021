@@ -441,8 +441,8 @@ header img {
 }
 
 .carte .menu {
-  margin-bottom: 20px;
-  margin-top: 20px;
+  margin-bottom: 25px;
+  margin-top: 25px;
   overflow-x: hidden;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -451,10 +451,10 @@ header img {
   display: flex;
   -webkit-animation: apparationmenu 1.4s linear;
           animation: apparationmenu 1.4s linear;
-  border-top-left-radius: 50px;
-  border-bottom-left-radius: 50px;
-  border-top-right-radius: 50px;
-  border-bottom-right-radius: 50px;
+  border-top-left-radius: 40px;
+  border-bottom-left-radius: 40px;
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
   cursor: pointer;
 }
 
@@ -480,8 +480,8 @@ header img {
       -ms-flex: 0 0 90%;
           flex: 0 0 90%;
   background: #fff;
-  border-top-left-radius: 50px;
-  border-bottom-left-radius: 50px;
+  border-top-left-radius: 40px;
+  border-bottom-left-radius: 40px;
   padding: 1%;
   -webkit-transition: 0.6s;
   transition: 0.6s;
@@ -492,6 +492,7 @@ header img {
 .carte .menu-content h4,
 .carte .menu-content p {
   margin: 10px;
+  font-size: 40px;
 }
 
 .carte .menu_price {
@@ -501,11 +502,12 @@ header img {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 10%;
           flex: 0 0 10%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding-bottom: 20px;
   background: #fff;
-  font-size: 30px;
+  font-size: 35px;
   font-weight: bolder;
 }
 
@@ -514,8 +516,8 @@ header img {
       -ms-flex: 0 0 15%;
           flex: 0 0 15%;
   background: #99e2d0;
-  border-top-right-radius: 50px;
-  border-bottom-right-radius: 50px;
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
   overflow: hidden;
   -webkit-transition: 0.6s;
   transition: 0.6s;
@@ -751,6 +753,10 @@ footer a {
     display: flex;
   }
   .carte h3 {
+    font-size: initial;
+  }
+  .carte .menu-content p,
+  .carte .menu-content h4 {
     font-size: initial;
   }
   button {
