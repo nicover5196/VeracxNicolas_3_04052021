@@ -22,31 +22,38 @@ body {
 }
 
 .loader {
-    border: 10px solid $colour-primaire;
-    border-top: 10px solid $colour-secondaire;
-    border-bottom: 10px solid $colour-tertiaire;
+    // border: 10px solid $colour-primaire;
+    // border-top: 10px solid $colour-secondaire;
+    // border-bottom: 10px solid $colour-tertiaire;
     border-left: 10px solid black;
     border-radius: 50%;
     width: 100px;
     height: 100px;
     animation: spin 3s ease-in-out;
     margin: auto;
-    position: absolute;
+    position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     z-index: -10;
+    border-color: white;
 }
 
 @keyframes spin {
     0% {
         transform: rotate(0deg);
         z-index: 10000;
+        border: 10px solid $colour-primaire;
+        border-top: 10px solid $colour-secondaire;
+        border-bottom: 10px solid $colour-tertiaire;
     }
     100% {
         transform: rotate(360deg);
         z-index: 10000;
+        border: 10px solid $colour-primaire;
+        border-top: 10px solid $colour-secondaire;
+        border-bottom: 10px solid $colour-tertiaire;
     }
 }
 
